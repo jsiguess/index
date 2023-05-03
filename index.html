@@ -13,10 +13,11 @@
   			if (username === user.username && password === user.password){
     			console.log('Login successful!');
     			alert('Login successful!');
- 			} else {
-    			console.log('Login failed. Please check your username and password.');
-    			alert('Login failed. Please check your username and password.');
-  			}
+ 			} else if (username === null || password === null){
+    			alert('Login failed. Empty username or password field.');
+  			} else {
+				alert('Login failed. Incorrect username or password.');
+			}
 		}
 	</script>
 	<form>
