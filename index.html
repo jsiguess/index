@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JavaScript Example</title>
+	<title>coral eating simulator</title>
 </head>
 <body>
-	<h1>Welcome to my website!</h1>
-	<button onclick="displayGreeting()">Click me!</button>
+	<h1>welcome! now eat coral and be happy :D</h1>
+	<button onclick="showDateTime()">Click me</button>
+
+	<div id="datetime"></div>
+
 	<script>
-		function displayGreeting() {
-			alert("Hello, world!");
+		function showDateTime() {
+  			const now = new Date();
+  			const region = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  			const datetimeString = `date: ${now.toLocaleString()} (${region})`;
+  			document.getElementById("datetime").textContent = datetimeString;
 		}
 	</script>
 </body>
