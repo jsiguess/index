@@ -5,39 +5,39 @@
 </head>
 <body>
 	<h1>welcome! now eat coral and be happy :D</h1>
-
 	<script>
+		function login() {
+  			const username = document.getElementById('username').value;
+  			password = document.getElementById('password').value;
+
+  			if (username === user.username && password === user.password){
+    			console.log('Login successful!');
+    			alert('Login successful!');
+ 			} else {
+    			console.log('Login failed. Please check your username and password.');
+    			alert('Login failed. Please check your username and password.');
+  			}
+		}
+	</script>
+	<form>
+		<label for="username">Name:</label>
+		<input type="text" id="username" name="username"><br><br>
+		
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password"><br><br>
+		
+		<input type="submit" value="Sign up" onclick="submitForm()">
+		<input type="submit" value="Log in" onclick="submitForm()">
+	</form>
+<script>
+	function submitForm() {
+ 		const username = document.getElementById('username').value;
+		const password = document.getElementById('password').value;
+
 		const user = {
-  username: 'exampleuser',
-  password: 'examplepassword'
-};
-
-// Next, create a function to handle the login process
-function login() {
-  // Get the values entered in the login form
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
-
-  // Check if the entered username and password match the user's credentials
-  if (username === user.username && password === user.password) {
-    // If the credentials match, log the user in and display a success message
-    console.log('Login successful!');
-    alert('Login successful!');
-  } else {
-    // If the credentials don't match, display an error message
-    console.log('Login failed. Please check your username and password.');
-    alert('Login failed. Please check your username and password.');
-  }
-}
-</script>
-<form onsubmit="login()">
-	<label for="username">Username:</label>
-	<input type="text" id="username" name="username"><br><br>
-	
-	<label for="password">Password:</label>
-	<input type="password" id="password" name="password"><br><br>
-	
-	<input type="submit" value="Log in">
-  </form>
+    	username: username,
+    	password: password};
+	}
+	</script>
 </body>
 </html>
