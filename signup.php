@@ -1,6 +1,3 @@
-<?php
-    include("dbdata.php");
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +5,9 @@
         <link rel="stylesheet" type="text/css" href="global.css">
         <div id="title"><p>Enter your information and register below</p></div>
         
+        <?php
+            include("dbdata.php");
+        ?>
         
     </head>
     <body>
