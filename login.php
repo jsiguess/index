@@ -1,9 +1,9 @@
-<?php
-    include("dbdata.php");
-?>
 <!DOCTYPE html>
 <html>
     <head>
+    <?php
+    include("dbdata.php");
+?>
         <link rel="stylesheet" type="text/css" href="logincss.css">
         <link rel="stylesheet" type="text/css" href="global.css">
         <div id="title"><p>Enter your information log in below</p></div>
